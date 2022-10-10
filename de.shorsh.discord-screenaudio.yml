@@ -12,7 +12,6 @@ finish-args:
   - --socket=pulseaudio
   - --filesystem=xdg-run/pipewire-0
   - --filesystem=host
-  - --device=dri
   - --device=all
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 modules:
