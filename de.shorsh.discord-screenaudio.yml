@@ -23,5 +23,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/maltejur/discord-screenaudio.git
-        tag: v1.4.1
-        commit: 9faabe1f3e3811f685f96096d9216a02e9ae929e
+        tag: v1.4.2
+        commit: e41af697f76d3f02a940a2e581615423dff9f36d
