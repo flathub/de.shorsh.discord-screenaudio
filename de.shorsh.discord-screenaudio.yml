@@ -13,6 +13,7 @@ finish-args:
   - --filesystem=xdg-run/pipewire-0
   - --filesystem=host
   - --device=all
+  - --talk-name=org.kde.StatusNotifierWatcher
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
 modules:
   - name: discord-screenaudio
