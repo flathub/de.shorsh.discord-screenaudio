@@ -1,20 +1,25 @@
 app-id: de.shorsh.discord-screenaudio
 runtime: org.kde.Platform
-runtime-version: "5.15-21.08"
+runtime-version: "5.15-22.08"
 sdk: org.kde.Sdk
 base: io.qt.qtwebengine.BaseApp
-base-version: "5.15-21.08"
+base-version: "5.15-22.08"
 command: discord-screenaudio
 finish-args:
   - --share=ipc
   - --share=network
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
+  - --filesystem=xdg-videos:ro
+  - --filesystem=xdg-pictures:ro
+  - --filesystem=xdg-download
   - --filesystem=xdg-run/pipewire-0
-  - --filesystem=host
   - --device=all
   - --talk-name=org.kde.StatusNotifierWatcher
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.kde.kglobalaccel
 modules:
   - name: discord-screenaudio
     buildsystem: cmake-ninja
